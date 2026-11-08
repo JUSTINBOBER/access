@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /brand/
+Disallow: /tools/
+Allow: /
+
+Sitemap: https://www.pawsandplayoh.com/sitemap.xml

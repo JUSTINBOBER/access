@@ -1,1 +1,11 @@
 .vercel
+.DS_Store
+__pycache__/
+
+# Photo Lab: local Python environment and compiled helper (rebuild with the steps in tools/photo-lab/README.md)
+tools/photo-lab/.venv/
+tools/photo-lab/bin/
+
+# Cloudflare / wrangler local state
+.wrangler/
+node_modules/

@@ -1,0 +1,5 @@
+#!/bin/sh
+# Shortcut: runs Photo Lab with its own Python environment.
+# Example: tools/photo-lab/lab cutout photo.jpg cutout.png
+DIR="$(cd "$(dirname "$0")" && pwd)"
+exec "$DIR/.venv/bin/python" -I "$DIR/photolab.py" "$@"

@@ -1,0 +1,4 @@
+#!/bin/sh
+# Builds the minified, upload-ready site into dist/
+DIR="$(cd "$(dirname "$0")" && pwd)"
+exec "$DIR/photo-lab/.venv/bin/python" -I "$DIR/build.py" "$@"

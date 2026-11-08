@@ -1,21 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Setup test</title>
-  <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center;
-           font-family: -apple-system, system-ui, sans-serif; background: #0f172a; color: #e2e8f0; }
-    main { text-align: center; padding: 2rem; }
-    h1 { font-size: 2.5rem; margin: 0 0 .5rem; }
-    p { color: #94a3b8; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paws &amp; Play Pet Sitting | In-Home Dog &amp; Cat Sitter in Northeast Ohio</title>
+  <meta name="description" content="Paws & Play Pet Sitting offers loving in-home pet sitting for dogs and cats across Northeast Ohio: drop-in visits, dog walks, day visits and overnight stays. Call (330) 690-0090 or email pawsandplaypetsoh@gmail.com." />
+  <link rel="canonical" href="https://www.pawsandplayoh.com/" />
+  <meta name="theme-color" content="#47BEB6" />
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Paws &amp; Play Pet Sitting" />
+  <meta property="og:title" content="Paws &amp; Play Pet Sitting | In-Home Pet Sitting in Northeast Ohio" />
+  <meta property="og:description" content="Loving in-home care for dogs & cats across Northeast Ohio. Drop-ins, walks, day visits and overnight stays." />
+  <meta property="og:url" content="https://www.pawsandplayoh.com/" />
+  <meta property="og:image" content="https://www.pawsandplayoh.com/images/logo.jpg" />
+  <meta property="og:image:alt" content="Paws & Play Pet Sitting logo with a dog and cat inside a paw print" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" type="image/png" href="images/favicon-64.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data: helps Google show the business, prices and FAQs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.pawsandplayoh.com/#business",
+    "name": "Paws & Play Pet Sitting",
+    "description": "Loving in-home pet sitting for dogs and cats across Northeast Ohio, including drop-in visits, dog walks, day visits and overnight stays.",
+    "url": "https://www.pawsandplayoh.com/",
+    "logo": "https://www.pawsandplayoh.com/images/logo.jpg",
+    "image": ["https://www.pawsandplayoh.com/images/pets/doodles-on-deck.webp", "https://www.pawsandplayoh.com/images/pets/orange-tabby-cat-portrait.webp", "https://www.pawsandplayoh.com/images/pets/weimaraners-overnight-stay.webp"],
+    "telephone": "+1-330-690-0090",
+    "email": "pawsandplaypetsoh@gmail.com",
+    "priceRange": "$60–$100",
+    "contactPoint": { "@type": "ContactPoint", "contactType": "customer service", "telephone": "+1-330-690-0090", "email": "pawsandplaypetsoh@gmail.com", "areaServed": "US-OH", "availableLanguage": "English" },
+    "address": { "@type": "PostalAddress", "addressRegion": "OH", "addressCountry": "US" },
+    "areaServed": [
+      { "@type": "State", "name": "Ohio" },
+      "Northeast Ohio", "Akron, OH", "Canton, OH", "Cuyahoga Falls, OH", "Stow, OH", "Kent, OH", "Hudson, OH", "Green, OH", "North Canton, OH", "Fairlawn, OH", "Tallmadge, OH", "Medina, OH", "Wadsworth, OH"
+    ],
+    "makesOffer": [
+      { "@type": "Offer", "name": "Drop-in pet visit", "description": "Feeding, playtime and cuddles in your home.", "price": "60", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Dog walk add-on", "price": "5", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Day visit", "description": "Extended daytime company for your pets.", "price": "85", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Overnight stay", "description": "Overnight in-home pet sitting for comfort and security.", "price": "100", "priceCurrency": "USD" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is in-home pet sitting?", "acceptedAnswer": { "@type": "Answer", "text": "In-home pet sitting means your dog or cat stays in their own home while a trusted sitter comes to them. Pets keep their routine, their own bed and their favorite spots, which is far less stressful than a kennel or boarding facility." } },
+      { "@type": "Question", "name": "How much does pet sitting cost?", "acceptedAnswer": { "@type": "Answer", "text": "Drop-in visits for feeding, playtime and cuddles are $60. Day visits are $85. Overnight stays are $100. Dog walks can be added for $5." } },
+      { "@type": "Question", "name": "Do you pet sit cats as well as dogs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Paws & Play Pet Sitting cares for both dogs and cats. Cats in particular do best at home, where their territory and litter routine stay the same." } },
+      { "@type": "Question", "name": "Can we meet before booking?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Call (330) 690-0090 or email pawsandplaypetsoh@gmail.com to schedule an interview or meet and greet so your pets can get to know their sitter and you can go over routines, feeding and house instructions." } },
+      { "@type": "Question", "name": "What should I leave out for the pet sitter?", "acceptedAnswer": { "@type": "Answer", "text": "Please leave your pet's food, treats, leash and any care instructions, and please provide cleaning products for accidents. Additional charges may apply if cleaning materials are not available." } },
+      { "@type": "Question", "name": "What areas do you serve?", "acceptedAnswer": { "@type": "Answer", "text": "Paws & Play Pet Sitting serves families across Northeast Ohio. Call (330) 690-0090 or email pawsandplaypetsoh@gmail.com to check availability in your town." } }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-paw" viewBox="0 0 24 24"><ellipse cx="12" cy="16.2" rx="5.2" ry="4.3" fill="currentColor"/><ellipse cx="5.4" cy="10.4" rx="2.1" ry="2.6" fill="currentColor" transform="rotate(-18 5.4 10.4)"/><ellipse cx="9.4" cy="6.2" rx="2.1" ry="2.7" fill="currentColor" transform="rotate(-6 9.4 6.2)"/><ellipse cx="14.6" cy="6.2" rx="2.1" ry="2.7" fill="currentColor" transform="rotate(6 14.6 6.2)"/><ellipse cx="18.6" cy="10.4" rx="2.1" ry="2.6" fill="currentColor" transform="rotate(18 18.6 10.4)"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.2 12 4l9 7.2"/><path d="M5.5 9.6V20h13V9.6"/><path d="M10 20v-5.5h4V20"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></symbol>
+    <symbol id="i-cat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5 5.5 3.5l4.3 3.7h4.4l4.3-3.7 1 7v2.8a7.5 6.7 0 0 1-15 0z"/><path d="M9.3 12.3h.01M14.7 12.3h.01" stroke-width="2.6"/><path d="M11 15.2h2l-1 1z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v10H10l-4.5 3.8V15.5H4z"/><path d="M8.5 10.5h7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6.2-6.5-11.5a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5.2 3.8h3.6l1.8 4.6-2.3 1.4a10.5 10.5 0 0 0 5.9 5.9l1.4-2.3 4.6 1.8v3.6a1.8 1.8 0 0 1-1.9 1.8A15.2 15.2 0 0 1 3.4 5.7a1.8 1.8 0 0 1 1.8-1.9z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.2" y="5.5" width="17.6" height="13" rx="2"/><path d="m3.8 7 8.2 6 8.2-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 60 50" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6c14 2 30 12 38 32"/><path d="M33 33l9 6 3-11"/></symbol>
+  </svg>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main">
+      <a href="#top" class="logo" aria-label="Paws & Play Pet Sitting home">
+        <img src="images/logo-icon.png" alt="" width="400" height="363" />
+        <span class="logo-text"><strong>Paws &amp; Play</strong><span>Pet Sitting</span></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services">Services &amp; Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#area">Service Area</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="tel:+13306900090" class="nav-phone"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> (330) 690-0090</a></li>
+        <li><a href="#book" class="btn btn-small">Book now</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
-    <h1>✅ It works!</h1>
-    <p>Built locally, pushed to GitHub, deployed on Vercel.</p>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">hi there, neighbor!</p>
+          <h1 class="hero-title"><span class="line">Loving in-home</span> <span class="line">pet sitting for <span class="scribble scribble-orange"><span class="accent">dogs &amp; cats</span><svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 14C38 5 72 17 108 10s66-5 89 2"/></svg></span></span> <span class="line">across Northeast Ohio</span></h1>
+          <p class="lead">Looking for a reliable, trustworthy, animal-loving pet sitter? Look no further. Your pets stay in the comfort of their own home, and you get true peace of mind while you're away.</p>
+          <div class="hero-actions">
+            <a href="#book" class="btn">Book a visit or meet &amp; greet</a>
+            <a href="tel:+13306900090" class="btn btn-ghost">Call (330) 690-0090</a>
+          </div>
+          <ul class="pills">
+            <li>Dogs &amp; cats</li>
+            <li>Drop-ins &amp; walks</li>
+            <li>Day visits</li>
+            <li>Overnight stays</li>
+          </ul>
+        </div>
+        <div class="hero-collage">
+          <div class="paw-doodles" aria-hidden="true">
+            <svg class="pd pd1"><use href="#i-paw"/></svg><svg class="pd pd2"><use href="#i-paw"/></svg><svg class="pd pd3"><use href="#i-paw"/></svg>
+          </div>
+          <div class="hero-art" data-parallax="0.04">
+            <img src="images/dog-and-cat.webp" width="820" height="624" alt="Illustration of a happy dog sitting beside a sleeping cat, representing in-home pet sitting" fetchpriority="high" />
+          </div>
+          <figure class="polaroid pol-1" data-parallax="-0.07">
+            <img src="images/pets/goldendoodle-closeup-sm.webp" width="640" height="853" alt="Goldendoodle, a Paws &amp; Play pet sitting client" />
+          </figure>
+          <figure class="polaroid pol-2" data-parallax="0.09">
+            <img style="object-position:60% 38%" src="images/pets/orange-tabby-cat-closeup-sm.webp" width="640" height="853" alt="Orange tabby cat client looking at the camera" />
+          </figure>
+          <p class="hand-note" aria-hidden="true">real clients,<br />real cuddles!<svg class="note-arrow"><use href="#i-arrow"/></svg></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Drop-in visits</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg><span>Dog walks</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg><span>Day visits</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg><span>Overnight stays</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg><span>Cat sitting</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg><span>Meet &amp; greets</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg><span>Northeast Ohio</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg><span>Drop-in visits</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg><span>Dog walks</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg><span>Day visits</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg><span>Overnight stays</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg><span>Cat sitting</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg><span>Meet &amp; greets</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg><span>Northeast Ohio</span><svg class="tick-paw" aria-hidden="true"><use href="#i-paw"/></svg></div></div>
+
+    <!-- Why in-home -->
+    <section class="section section-white wavy" id="why">
+      <div class="container">
+        <div class="intro-copy">
+          <p class="eyebrow">why in-home pet sitting?</p>
+          <h2>Home is where your pet is <span class="scribble scribble-teal">happiest<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 14C38 5 72 17 108 10s66-5 89 2"/></svg></span></h2>
+          <p>Kennels and boarding facilities can be loud, unfamiliar and stressful, especially for older pets, anxious dogs and cats who don't like change. With in-home pet sitting from Paws &amp; Play, your dog or cat stays right where they feel safest, with their own bed, their own toys and their usual routine. I come to you, so there's no packing, no drop-off and no exposure to other animals.</p>
+        </div>
+        <div class="benefits">
+          <div class="benefit">
+            <span class="icon"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg></span>
+            <h3>The comfort of their own home</h3>
+            <p>Familiar smells, favorite napping spots and a quiet house mean less stress for your pet while you travel or work long days.</p>
+          </div>
+          <div class="benefit">
+            <span class="icon"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span>
+            <h3>Their routine, unchanged</h3>
+            <p>Meals, walks, playtime and bedtime happen the way your pet is used to, following your instructions.</p>
+          </div>
+          <div class="benefit">
+            <span class="icon"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+            <h3>Peace of mind for you</h3>
+            <p>A dependable, animal-loving sitter checks on your pets and your home, so you can relax while you're away.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services & pricing -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">services &amp; pricing</p>
+          <h2>Pet sitting services for you and your <span class="scribble scribble-orange">furry friends<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 14C38 5 72 17 108 10s66-5 89 2"/></svg></span></h2>
+          <p>Simple, upfront pricing for dog sitting and cat sitting in your home. Mix and match visits to fit your schedule, whether it's a long workday, a weekend getaway or a week-long vacation.</p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <span class="badge badge-teal">Purr-fect for cats</span>
+            <figure class="service-photo"><img src="images/pets/orange-tabby-cat-drop-in-visit-sm.webp" srcset="images/pets/orange-tabby-cat-drop-in-visit-sm.webp 640w, images/pets/orange-tabby-cat-drop-in-visit.webp 1400w" sizes="(max-width: 900px) 92vw, 360px" width="1500" height="2000" loading="lazy" decoding="async" alt="Orange tabby cat looking up during a drop-in cat sitting visit" style="object-position:50% 40%" /></figure>
+            <h3>Drop-In Visits</h3>
+            <p class="price"><span class="amount">$60</span><span class="per">/ visit</span></p>
+            <p>Drop-ins for feeding, playtime and cuddles. Perfect for cats, independent dogs, and busy days when you can't make it home.</p>
+            <ul class="ticks"><li>Fresh food &amp; water</li><li>Playtime &amp; attention</li><li>Litter box or potty break</li></ul>
+            <a href="#book" class="btn btn-ghost" data-service="Drop-in visit">Book a drop-in</a>
+          </article>
+          <article class="service featured">
+            <span class="badge">Great for long days</span>
+            <figure class="service-photo"><img src="images/pets/goldendoodles-day-visit-sm.webp" srcset="images/pets/goldendoodles-day-visit-sm.webp 640w, images/pets/goldendoodles-day-visit.webp 1400w" sizes="(max-width: 900px) 92vw, 360px" width="2000" height="1500" loading="lazy" decoding="async" alt="Two goldendoodles on the couch during a day visit pet sitting" style="object-position:50% 55%" /></figure>
+            <h3>Day Visits</h3>
+            <p class="price"><span class="amount">$85</span><span class="per">/ day</span></p>
+            <p>Day visits to keep your furry friends company, so they aren't home alone all day while you're at work or out of town.</p>
+            <ul class="ticks"><li>Extended company &amp; care</li><li>Meals on schedule</li><li>Play, cuddles &amp; rest</li></ul>
+            <a href="#book" class="btn" data-service="Day visit">Book a day visit</a>
+          </article>
+          <article class="service">
+            <span class="badge badge-navy">Never alone at night</span>
+            <figure class="service-photo"><img src="images/pets/weimaraners-overnight-stay-sm.webp" srcset="images/pets/weimaraners-overnight-stay-sm.webp 640w, images/pets/weimaraners-overnight-stay.webp 1400w" sizes="(max-width: 900px) 92vw, 360px" width="2000" height="1500" loading="lazy" decoding="async" alt="Two Weimaraners on the bed during an overnight pet sitting stay" style="object-position:50% 50%" /></figure>
+            <h3>Overnight Stays</h3>
+            <p class="price"><span class="amount">$100</span><span class="per">/ night</span></p>
+            <p>Overnight stays to provide comfort and security. Your pets aren't alone at night, and your home stays looked after too.</p>
+            <ul class="ticks"><li>Evening &amp; morning care</li><li>Bedtime company</li><li>A lived-in, secure home</li></ul>
+            <a href="#book" class="btn btn-ghost" data-service="Overnight stay">Book an overnight</a>
+          </article>
+        </div>
+
+        <div class="addon">
+          <img class="addon-photo" src="images/pets/dog-walk-happy-dog-sm.webp" srcset="images/pets/dog-walk-happy-dog-sm.webp 640w, images/pets/dog-walk-happy-dog.webp 1400w" sizes="96px" width="1500" height="2000" loading="lazy" decoding="async" alt="Happy black and white dog on a leash during a dog walk" style="object-position:50% 40%" />
+          <span class="addon-price">+$5</span>
+          <div>
+            <h3>Dog walks</h3>
+            <p>Add a neighborhood walk to any visit for just $5, for exercise, sniffing and a potty break.</p>
+          </div>
+          <a href="#book" class="btn btn-orange" data-service="Drop-in visit" data-walk="1">Add a walk</a>
+        </div>
+
+        <p class="note">Please provide cleaning products for accidents. Additional charges may be applied if materials are not available.</p>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section-teal wavy" id="how">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">three easy steps</p>
+          <h2>Booking a pet sitter is <span class="scribble scribble-teal">easy<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 14C38 5 72 17 108 10s66-5 89 2"/></svg></span></h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Reach out</h3>
+            <p>Call <a href="tel:+13306900090">(330) 690-0090</a>, email <a href="mailto:pawsandplaypetsoh@gmail.com">pawsandplaypetsoh@gmail.com</a>, or send a booking request below with your dates, your pets and the services you need.</p>
+          </li>
+          <li>
+            <h3>Meet &amp; greet</h3>
+            <p>We schedule an interview at your home so your pets can meet their sitter and you can walk through routines, feeding and house details.</p>
+          </li>
+          <li>
+            <h3>Relax while you're away</h3>
+            <p>Your pets get loving care at home on your schedule, and you come back to happy, relaxed animals.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-white wavy" id="about">
+      <div class="container split">
+        <div class="photo-wrap">
+          <div class="photo">
+            <img src="images/pets/black-kitten-belly-rub-sm.webp" srcset="images/pets/black-kitten-belly-rub-sm.webp 640w, images/pets/black-kitten-belly-rub.webp 1400w" sizes="(max-width: 900px) 92vw, 540px" width="1905" height="2000" loading="lazy" decoding="async" alt="Pet sitter giving a black kitten belly rubs during an in-home cat sitting visit" />
+            <span class="photo-tag">belly rubs included!</span>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">nice to meet you!</p>
+          <h2>A reliable, <span class="scribble scribble-orange">animal-loving<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 14C38 5 72 17 108 10s66-5 89 2"/></svg></span> pet sitter in Northeast Ohio</h2>
+          <p>Paws &amp; Play Pet Sitting offers loving, in-home pet sitting for dogs and cats across Northeast Ohio, giving pets the comfort of their own home and owners true peace of mind while they are away.</p>
+          <p>Every pet is different. Some want a long walk and a game of fetch, others just want a quiet lap and a full food bowl. I take the time to learn your pet's personality, habits and routine, and I treat your home with the same care as your animals.</p>
+          <ul class="features">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> Dog sitting</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-cat"/></svg> Cat sitting</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg> Meet &amp; greet first</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg> Local to NE Ohio</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">my happy clients</p>
+          <h2>Pets I've <span class="scribble scribble-teal">cared for<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 14C38 5 72 17 108 10s66-5 89 2"/></svg></span> across Northeast Ohio</h2>
+          <p>Doodles, Weimaraners, puppies, kittens and plenty of cats: here are some of the furry friends I've had the joy of pet sitting. Tap a photo to see it bigger.</p>
+        </div>
+        <ul class="gallery">
+          <li><button type="button" class="gallery-item" data-full="images/pets/doodles-on-deck.webp" data-caption="Sunbathing with my bestie">
+            <img src="images/pets/doodles-on-deck-sm.webp" srcset="images/pets/doodles-on-deck-sm.webp 640w, images/pets/doodles-on-deck.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="2000" height="1500" loading="lazy" decoding="async" alt="Two curly doodles relaxing on a sunny deck" />
+            <span class="gallery-cap">Sunbathing with my bestie</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/black-cat-cat-sitting.webp" data-caption="I&#39;ll allow one pet. Maybe two.">
+            <img src="images/pets/black-cat-cat-sitting-sm.webp" srcset="images/pets/black-cat-cat-sitting-sm.webp 640w, images/pets/black-cat-cat-sitting.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Black cat with yellow eyes in a cat sitting client's home" />
+            <span class="gallery-cap">I&#39;ll allow one pet. Maybe two.</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/cocker-spaniel-puppies.webp" data-caption="Double the cuddles">
+            <img src="images/pets/cocker-spaniel-puppies-sm.webp" srcset="images/pets/cocker-spaniel-puppies-sm.webp 640w, images/pets/cocker-spaniel-puppies.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="943" height="1068" loading="lazy" decoding="async" alt="Black and golden cocker spaniel puppies on a red couch" />
+            <span class="gallery-cap">Double the cuddles</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/tuxedo-cat-rolling.webp" data-caption="Rolling out the welcome mat">
+            <img src="images/pets/tuxedo-cat-rolling-sm.webp" srcset="images/pets/tuxedo-cat-rolling-sm.webp 640w, images/pets/tuxedo-cat-rolling.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Tuxedo cat rolling playfully on a living room carpet" />
+            <span class="gallery-cap">Rolling out the welcome mat</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/weimaraner-counter.webp" data-caption="Is it snack time yet?">
+            <img src="images/pets/weimaraner-counter-sm.webp" srcset="images/pets/weimaraner-counter-sm.webp 640w, images/pets/weimaraner-counter.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Weimaraner resting its head on the kitchen counter" />
+            <span class="gallery-cap">Is it snack time yet?</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/orange-tabby-cat-closeup.webp" data-caption="Did you bring treats?">
+            <img style="object-position:60% 38%" src="images/pets/orange-tabby-cat-closeup-sm.webp" srcset="images/pets/orange-tabby-cat-closeup-sm.webp 640w, images/pets/orange-tabby-cat-closeup.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Curious orange tabby cat with a fish-shaped collar tag" />
+            <span class="gallery-cap">Did you bring treats?</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/black-cat-pet-camp.webp" data-caption="My camper, my rules">
+            <img src="images/pets/black-cat-pet-camp-sm.webp" srcset="images/pets/black-cat-pet-camp-sm.webp 640w, images/pets/black-cat-pet-camp.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="2000" height="1371" loading="lazy" decoding="async" alt="Fluffy black cat lounging on top of a camper-shaped pet bed" />
+            <span class="gallery-cap">My camper, my rules</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/goldendoodle-closeup.webp" data-caption="Ready for my close-up">
+            <img src="images/pets/goldendoodle-closeup-sm.webp" srcset="images/pets/goldendoodle-closeup-sm.webp 640w, images/pets/goldendoodle-closeup.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Close-up of a goldendoodle looking into the camera" />
+            <span class="gallery-cap">Ready for my close-up</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/black-kitten-window.webp" data-caption="Soaking up the sunshine">
+            <img src="images/pets/black-kitten-window-sm.webp" srcset="images/pets/black-kitten-window-sm.webp 640w, images/pets/black-kitten-window.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Black kitten sunbathing on a window perch" />
+            <span class="gallery-cap">Soaking up the sunshine</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/dachshund-puppy.webp" data-caption="Small pup, big heart">
+            <img src="images/pets/dachshund-puppy-sm.webp" srcset="images/pets/dachshund-puppy-sm.webp 640w, images/pets/dachshund-puppy.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="750" height="933" loading="lazy" decoding="async" alt="Cream dachshund puppy with a teal collar sitting on a rug" />
+            <span class="gallery-cap">Small pup, big heart</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/dog-walk-two-dogs.webp" data-caption="Walkies are my favorite!">
+            <img src="images/pets/dog-walk-two-dogs-sm.webp" srcset="images/pets/dog-walk-two-dogs-sm.webp 640w, images/pets/dog-walk-two-dogs.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="844" height="1125" loading="lazy" decoding="async" alt="Two black and white dogs sniffing the grass on a pet sitter's walk" />
+            <span class="gallery-cap">Walkies are my favorite!</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/white-orange-kitten.webp" data-caption="Watching for my sitter">
+            <img src="images/pets/white-orange-kitten-sm.webp" srcset="images/pets/white-orange-kitten-sm.webp 640w, images/pets/white-orange-kitten.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1430" height="2000" loading="lazy" decoding="async" alt="White and orange kitten sitting by a sunny window" />
+            <span class="gallery-cap">Watching for my sitter</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/black-kitten-pink-harness.webp" data-caption="Belly rubs, please!">
+            <img src="images/pets/black-kitten-pink-harness-sm.webp" srcset="images/pets/black-kitten-pink-harness-sm.webp 640w, images/pets/black-kitten-pink-harness.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Playful black kitten in a pink harness rolling on the rug" />
+            <span class="gallery-cap">Belly rubs, please!</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/weimaraners-smile.webp" data-caption="Say cheese!">
+            <img src="images/pets/weimaraners-smile-sm.webp" srcset="images/pets/weimaraners-smile-sm.webp 640w, images/pets/weimaraners-smile.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Weimaraner grinning at the camera with a second Weimaraner lounging behind on the couch" />
+            <span class="gallery-cap">Say cheese!</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/tabby-cat-chin-scratches.webp" data-caption="Chin scratches hit the spot">
+            <img src="images/pets/tabby-cat-chin-scratches-sm.webp" srcset="images/pets/tabby-cat-chin-scratches-sm.webp 640w, images/pets/tabby-cat-chin-scratches.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Pet sitter giving a tabby cat chin scratches in its bed" />
+            <span class="gallery-cap">Chin scratches hit the spot</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/tuxedo-cat-belly-up.webp" data-caption="Too comfy to get up">
+            <img src="images/pets/tuxedo-cat-belly-up-sm.webp" srcset="images/pets/tuxedo-cat-belly-up-sm.webp 640w, images/pets/tuxedo-cat-belly-up.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Fluffy tuxedo cat lying upside down on the carpet" />
+            <span class="gallery-cap">Too comfy to get up</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/black-cat-cuddles.webp" data-caption="Best seat in the house">
+            <img src="images/pets/black-cat-cuddles-sm.webp" srcset="images/pets/black-cat-cuddles-sm.webp 640w, images/pets/black-cat-cuddles.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Black cat curled up on the pet sitter&#x27;s chest during a cuddle" />
+            <span class="gallery-cap">Best seat in the house</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/tabby-cat-hello.webp" data-caption="Coming to say hello">
+            <img src="images/pets/tabby-cat-hello-sm.webp" srcset="images/pets/tabby-cat-hello-sm.webp 640w, images/pets/tabby-cat-hello.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Tabby cat walking up to greet the pet sitter" />
+            <span class="gallery-cap">Coming to say hello</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/weimaraners-couch.webp" data-caption="Saving you a spot">
+            <img src="images/pets/weimaraners-couch-sm.webp" srcset="images/pets/weimaraners-couch-sm.webp 640w, images/pets/weimaraners-couch.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="2000" height="1500" loading="lazy" decoding="async" alt="Two Weimaraners relaxing together on a cream couch" />
+            <span class="gallery-cap">Saving you a spot</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/black-cat-closeup.webp" data-caption="Did someone say dinner?">
+            <img src="images/pets/black-cat-closeup-sm.webp" srcset="images/pets/black-cat-closeup-sm.webp 640w, images/pets/black-cat-closeup.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Close-up of a black cat with bright green eyes" />
+            <span class="gallery-cap">Did someone say dinner?</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/tuxedo-kitten-sitting.webp" data-caption="Fluffy and ready for snacks">
+            <img src="images/pets/tuxedo-kitten-sitting-sm.webp" srcset="images/pets/tuxedo-kitten-sitting-sm.webp 640w, images/pets/tuxedo-kitten-sitting.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Fluffy black and white tuxedo cat sitting on the carpet" />
+            <span class="gallery-cap">Fluffy and ready for snacks</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/tabby-cat-nap.webp" data-caption="Nap time is serious business">
+            <img src="images/pets/tabby-cat-nap-sm.webp" srcset="images/pets/tabby-cat-nap-sm.webp 640w, images/pets/tabby-cat-nap.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Long-haired tabby cat napping on a blue and white comforter" />
+            <span class="gallery-cap">Nap time is serious business</span>
+          </button></li>
+          <li><button type="button" class="gallery-item" data-full="images/pets/tabby-cat-doorway.webp" data-caption="Waiting by the door for you">
+            <img src="images/pets/tabby-cat-doorway-sm.webp" srcset="images/pets/tabby-cat-doorway-sm.webp 640w, images/pets/tabby-cat-doorway.webp 1400w" sizes="(max-width: 560px) 46vw, (max-width: 900px) 30vw, 270px" width="1500" height="2000" loading="lazy" decoding="async" alt="Tabby cat sitting in a doorway looking at the camera" />
+            <span class="gallery-cap">Waiting by the door for you</span>
+          </button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Cats -->
+    <section class="section" id="cats">
+      <div class="container split split-reverse">
+        <div>
+          <p class="eyebrow">calling all cat people</p>
+          <h2>Cat sitting that keeps your cat <span class="scribble scribble-orange">calm<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 14C38 5 72 17 108 10s66-5 89 2"/></svg></span></h2>
+          <p>Cats are creatures of habit. A trip to a boarding facility can mean days of hiding and stress, but a cat sitter who visits at home keeps their world exactly the same. Drop-in cat sitting visits include fresh food and water, litter box scooping, playtime, and as many chin scratches as your cat allows.</p>
+          <p>Whether you have one shy cat or a busy multi-pet household with dogs and cats together, Paws &amp; Play makes sure everyone is fed, cared for and comfortable.</p>
+          <a href="#book" class="btn" data-service="Drop-in visit">Book cat sitting</a>
+        </div>
+        <div class="photo-stack">
+          <div class="photo main"><img src="images/pets/orange-tabby-cat-portrait-sm.webp" srcset="images/pets/orange-tabby-cat-portrait-sm.webp 640w, images/pets/orange-tabby-cat-portrait.webp 1400w" sizes="(max-width: 900px) 70vw, 400px" width="1435" height="2000" loading="lazy" decoding="async" alt="Orange tabby cat sitting calmly at home with a cat sitter" style="object-position:50% 30%" /></div>
+          <div class="photo inset"><img src="images/pets/two-cats-cuddling-sm.webp" srcset="images/pets/two-cats-cuddling-sm.webp 640w, images/pets/two-cats-cuddling.webp 1400w" sizes="220px" width="1500" height="2000" loading="lazy" decoding="async" alt="Black cat and white and orange cat cuddled together on a chair" style="object-position:50% 45%" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service area -->
+    <section class="section section-teal wavy" id="area">
+      <div class="container narrow center">
+        <p class="eyebrow">where I sit</p>
+        <h2>Pet sitting across Northeast Ohio</h2>
+        <p class="muted">Paws &amp; Play Pet Sitting provides in-home dog sitting, cat sitting and dog walking for families in communities throughout Northeast Ohio, including:</p>
+        <ul class="towns">
+          <li>Akron</li><li>Canton</li><li>Cuyahoga Falls</li><li>Stow</li><li>Kent</li><li>Hudson</li>
+          <li>Green</li><li>North Canton</li><li>Fairlawn</li><li>Tallmadge</li><li>Medina</li><li>Wadsworth</li>
+        </ul>
+        <p class="muted">Don't see your town? Call <a href="tel:+13306900090">(330) 690-0090</a> or email <a href="mailto:pawsandplaypetsoh@gmail.com">pawsandplaypetsoh@gmail.com</a> to check availability.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="narrow">
+        <div class="section-head">
+          <p class="eyebrow">good questions</p>
+          <h2>Pet sitting FAQ</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>What is in-home pet sitting?</summary>
+            <p>In-home pet sitting means your dog or cat stays in their own home while a trusted sitter comes to them. Pets keep their routine, their own bed and their favorite spots, which is far less stressful than a kennel or boarding facility.</p>
+          </details>
+          <details>
+            <summary>How much does pet sitting cost?</summary>
+            <p>Drop-in visits for feeding, playtime and cuddles are $60. Day visits are $85. Overnight stays are $100. Dog walks can be added for $5.</p>
+          </details>
+          <details>
+            <summary>Do you pet sit cats as well as dogs?</summary>
+            <p>Yes. Paws &amp; Play Pet Sitting cares for both dogs and cats. Cats in particular do best at home, where their territory and litter routine stay the same.</p>
+          </details>
+          <details>
+            <summary>Can we meet before booking?</summary>
+            <p>Absolutely. Call <a href="tel:+13306900090">(330) 690-0090</a> or email <a href="mailto:pawsandplaypetsoh@gmail.com">pawsandplaypetsoh@gmail.com</a> to schedule an interview or meet and greet so your pets can get to know their sitter and you can go over routines, feeding and house instructions.</p>
+          </details>
+          <details>
+            <summary>What should I leave out for the pet sitter?</summary>
+            <p>Please leave your pet's food, treats, leash and any care instructions, and please provide cleaning products for accidents. Additional charges may apply if cleaning materials are not available.</p>
+          </details>
+          <details>
+            <summary>What areas do you serve?</summary>
+            <p>Paws &amp; Play Pet Sitting serves families across Northeast Ohio. Call <a href="tel:+13306900090">(330) 690-0090</a> or email <a href="mailto:pawsandplaypetsoh@gmail.com">pawsandplaypetsoh@gmail.com</a> to check availability in your town.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="section section-white wavy" id="book">
+      <div class="container book-grid">
+        <div>
+          <p class="eyebrow">let's get started</p>
+          <h2>Book pet sitting or schedule an interview</h2>
+          <p>Send a request with your dates and pets, or contact me directly to schedule a visit and/or a meet &amp; greet. Requests from this form go straight to <a href="mailto:pawsandplaypetsoh@gmail.com">pawsandplaypetsoh@gmail.com</a>, and I'll get back to you to confirm availability.</p>
+          <div class="contact-info">
+            <a href="tel:+13306900090"><span><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>(330) 690-0090</a>
+            <a href="mailto:pawsandplaypetsoh@gmail.com"><span><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></span>pawsandplaypetsoh@gmail.com</a>
+            <p><span><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span>Serving Northeast Ohio</p>
+          </div>
+        </div>
+        <form class="booking-form" id="booking-form" novalidate>
+          <div class="row">
+            <label>Your name
+              <input type="text" name="name" autocomplete="name" required />
+              <span class="error" aria-live="polite"></span>
+            </label>
+            <label>Email
+              <input type="email" name="email" autocomplete="email" required />
+              <span class="error" aria-live="polite"></span>
+            </label>
+          </div>
+          <div class="row">
+            <label>Phone
+              <input type="tel" name="phone" autocomplete="tel" placeholder="(330) 555-0123" required />
+              <span class="error" aria-live="polite"></span>
+            </label>
+            <label>Town / city
+              <input type="text" name="town" autocomplete="address-level2" placeholder="e.g. Akron" required />
+              <span class="error" aria-live="polite"></span>
+            </label>
+          </div>
+          <div class="row">
+            <label>Pet name(s)
+              <input type="text" name="pets" placeholder="e.g. Biscuit &amp; Luna" required />
+              <span class="error" aria-live="polite"></span>
+            </label>
+            <label>Type of pets
+              <select name="petType" required>
+                <option value="">Choose…</option>
+                <option>Dog(s)</option>
+                <option>Cat(s)</option>
+                <option>Dogs &amp; cats</option>
+                <option>Other</option>
+              </select>
+              <span class="error" aria-live="polite"></span>
+            </label>
+          </div>
+          <label>Service
+            <select name="service" required>
+              <option value="">Choose a service…</option>
+              <option>Meet &amp; greet / interview</option>
+              <option>Drop-in visit</option>
+              <option>Day visit</option>
+              <option>Overnight stay</option>
+              <option>Not sure yet</option>
+            </select>
+            <span class="error" aria-live="polite"></span>
+          </label>
+          <div class="row">
+            <label>Start date
+              <input type="date" name="startDate" required />
+              <span class="error" aria-live="polite"></span>
+            </label>
+            <label>End date <span class="optional">(optional)</span>
+              <input type="date" name="endDate" />
+              <span class="error" aria-live="polite"></span>
+            </label>
+          </div>
+          <label class="check"><input type="checkbox" name="walks" value="Yes" /> Add dog walks (+$5 per visit)</label>
+          <label>Anything I should know?
+            <textarea name="notes" rows="3" placeholder="Feeding schedule, medications, temperament, visit times…"></textarea>
+          </label>
+          <!-- Spam trap: hidden from people, bots fill it in -->
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn btn-block">Send request <svg class="btn-paw" aria-hidden="true"><use href="#i-paw"/></svg></button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <button type="button" class="lb-close" aria-label="Close">×</button>
+    <button type="button" class="lb-nav lb-prev" aria-label="Previous photo">‹</button>
+    <figure><img alt="" /><figcaption></figcaption></figure>
+    <button type="button" class="lb-nav lb-next" aria-label="Next photo">›</button>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="logo">
+          <img src="images/logo-icon.png" alt="" width="400" height="363" loading="lazy" />
+          <span class="logo-text"><strong>Paws &amp; Play</strong><span>Pet Sitting</span></span>
+        </a>
+        <p style="margin-top:16px">Loving in-home care for dogs &amp; cats across Northeast Ohio.<br />Questions? <a href="mailto:pawsandplaypetsoh@gmail.com">pawsandplaypetsoh@gmail.com</a></p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#services">Drop-in visits – $60</a></li>
+          <li><a href="#services">Day visits – $85</a></li>
+          <li><a href="#services">Overnight stays – $100</a></li>
+          <li><a href="#services">Dog walks – +$5</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+13306900090">(330) 690-0090</a></li>
+          <li><a href="mailto:pawsandplaypetsoh@gmail.com">pawsandplaypetsoh@gmail.com</a></li>
+          <li>Northeast Ohio</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright container">© <span id="year"></span> Paws &amp; Play Pet Sitting. All rights reserved.</p>
+  </footer>
+
+  <a href="#top" class="to-top" aria-label="Back to top">↑</a>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+// Cloudflare Workers config: serves the minified website in dist/ as static files.
+// Rebuild dist/ with `tools/build` before committing site changes.
+{
+  "name": "paws-and-play",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}
